@@ -1,5 +1,7 @@
 // import React, { useEffect, useState } from 'react';
 
+import Navbar from "./navbar";
+
 
 
 function Home() {
@@ -17,9 +19,10 @@ function Home() {
   // }, [])
 
   return (
+    
     <div>
+        <Navbar />
         <h1>Welcome to My Website</h1>  
-        {/* <a href="http://localhost:3000/writing">Writings</a> */}
       {/* {(typeof backendData.sampleList === 'undefined') ? (
         <p>Loading...</p>
       ) : (

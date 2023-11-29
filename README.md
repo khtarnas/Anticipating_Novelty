@@ -1,6 +1,12 @@
+# Set-up Instructions:
+1. Clone the repo onto your local computer
+2. Run '''npm install''' in both the client and server folders to generate a node_modules folder in each based on their respective package.json files.
+3. Run '''npm run dev''' in server folder and leave running
+4. Run '''npm start''' in the client folder -- the link should automatically pop up, but if not, navigate [here](https://pages.github.com/).
+
 # Explanation:
 
-Hosted on: [TODO](https://pages.github.com/).
+TODO
 
 # Ideas:
 

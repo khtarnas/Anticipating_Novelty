@@ -15,7 +15,6 @@ function App() {
         <br />
         <Routes>
           <Route
-            exact
             path="/"
             element={<Home />}
           />
