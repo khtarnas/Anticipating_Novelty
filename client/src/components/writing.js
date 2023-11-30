@@ -1,4 +1,6 @@
 
+import "../styles/writing.css"
+
 function Writing() {
 
   return(
