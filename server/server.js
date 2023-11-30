@@ -7,7 +7,7 @@
 const express = require('express')
 const path = require('path');
 
-const WritingRouter = require('./routes/writing');
+const WritingController = require('./controllers/writing_controllers');
 
 const app = express()
 const PORT = 3001
@@ -19,11 +19,11 @@ app.get("/api", (req, res) => {
 /********* ROUTING *********/
 
 // Use routes
-app.use('/writing', WritingRouter);
+app.use('/writing', WritingController);
 
 // set the initial entry point
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/index.html'))
+    res.send("TEMPPPPPP");
 });
 
 app.listen(PORT, () => {

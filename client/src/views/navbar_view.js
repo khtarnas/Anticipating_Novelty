@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom'
 import "../styles/navbar.css"
 
 function Navbar() {
     return (
         <div>
             <nav className="nav">
-                <a href="/" className="site-title">Site Name</a> 
+                <Link to="/" className="site-title">Site Name</Link> 
                 <ul>
-                    <li><a href="/writing">writing</a></li>
+                    <li><Link to="/writing">writing</Link></li>
                 </ul>
             </nav>
         </div>

@@ -1,5 +1,7 @@
 # Current Status:
 
+on Nov. 28: Changed naming conventions to fit desired MVC structure. Added nested routing.
+
 on Nov. 29: Created the foundation of the application with a working and connected front and backend. Started added style and other additions. Next step: just added the writing model. Create a way to add a new writing and to view it. AND/OR get hosting set up.
 
 # Set-up Instructions:
