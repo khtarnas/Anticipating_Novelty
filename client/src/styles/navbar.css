@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem; /* space inbetween items */
+    padding: 0 1rem; /* space on the edges */
+    align-items: stretch; /* items span full height of bar */
+    height: 4.5rem;
+}
+
+.site-title {
+    font-size: 2.1rem;
+
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+
+}
+
+.nav a {
+    color: inherit; /* inherits color from parents (i.e. .nav) */
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+}
+
+/* .nav a.active { No functionality for this atm
+    background-color: #555;
+} */
+
+.nav a:hover { /* on hover over the item -- below active in order to supersede it */
+    background-color: #777;
+}
