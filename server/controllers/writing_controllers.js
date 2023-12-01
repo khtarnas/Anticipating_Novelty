@@ -7,12 +7,34 @@
  */
 
 const express = require('express');
-const path = require('path');
 
+// Import model:
+const Writing = require("../models/writing_model.js");
+
+// Set up router:
 const router = express();
+router.use(express.json());
+router.use(
+  express.urlencoded({
+    extended: true,
+  }),
+);
 
-router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/writing/writing_index.html'))
-  });
+/****** Routes: ******/
+router.post('/add', async (req, res, next) => {
+  const {
+    title, desc, text
+  } = req.body;
+
+  try {
+    await Writing.create({
+      title, desc, text
+    });
+    res.send('event created');
+    
+  } catch (err) {
+    next(err);
+  }
+});
 
 module.exports = router;

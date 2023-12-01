@@ -5,25 +5,40 @@
  */
 
 const express = require('express')
-const path = require('path');
+const mongoose = require('mongoose');
 
 const WritingController = require('./controllers/writing_controllers');
 
 const app = express()
 const PORT = 3001
 
-app.get("/api", (req, res) => {
-    res.json({ "sampleList" : ["Hello from server!", "item2", "item3"] });
+/********* Database *********/
+const URI = 'mongodb://127.0.0.1:27017/';
+console.log("hello");
+
+mongoose.connect(URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => console.log('Connected!'));
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error: '));
+db.once('open', () => {
+  console.log('Connected successfully!');
 });
 
 /********* ROUTING *********/
 
-// Use routes
+// Route to controllers
 app.use('/writing', WritingController);
 
-// set the initial entry point
+// TEMP SHIT
 app.get('/', (req, res) => {
     res.send("TEMPPPPPP");
+});
+
+app.get("/api", (req, res) => {
+    res.json({ "sampleList" : ["Hello from server!", "item2", "item3"] });
 });
 
 app.listen(PORT, () => {

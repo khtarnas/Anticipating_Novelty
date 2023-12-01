@@ -1,38 +1,41 @@
 import { Link } from 'react-router-dom'
 import React, { useState } from 'react';
 import "../../styles/writing.css"
+import * as handler from '../../handlers/writing_handler.js';
 
 function Writing() {
 
   /****** States ******/
-  const [currTitle, setCurrTitle] = useState('');
+  const [currTitle, setCurrTitle] = useState('1000');
   const [currDesc, setCurrDesc] = useState('');
   const [currText, setCurrText] = useState('');
 
   /****** Handling functions ******/
   const addNewWriting = async () => {
-    window.alert(`title = ${currTitle}, desc = ${currDesc}, text = ${currText}.`);
+
+    console.log(currTitle);
+    console.log("HELLO?!");
+
+    if (currTitle === '') {
+      window.alert('Title is required. Please add a title and re-submit.');
+      return;
+    } else if (currText === '') {
+      window.alert('Text is required. Please add some text and re-submit.');
+      return;
+    }
+
+    // window.alert(`title = ${currTitle}, desc = ${currDesc}, text = ${currText}.`);
+    const data = await handler.addNewWriting(currTitle, currDesc, currText);
+    window.alert(data);
+    // if (data === '') {
+    //   window.alert('todo: failure message');
+    // } else {
+    //   window.alert('todo: success message');
+    // }
+    
     setCurrTitle('');
     setCurrDesc('');
     setCurrText('');
-
-    // if (friends.includes(currFriend)) {
-    //   window.alert('already friends with that user!');
-    // } else {
-    //   const data = await api.getUser(username);
-    //   if (data === '') {
-    //     window.alert('user does not exist!');
-    //   } else {
-    //     try {
-    //       const time = new Date();
-    //       await api.sendRequest(username, currFriend, time);
-    //     } catch (err) {
-    //       window.alert('could not add friend!');
-    //     }
-    //   }
-    // }
-    // setCurrFriend('');
-    // removeFriend(user, friend);
   };
 
 
