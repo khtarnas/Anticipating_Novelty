@@ -1,9 +1,9 @@
 /**
- * writing.js file: the router for writings. Defines all routes that have to do
- *   with writings and connects them with their respective views. Finally
- *   exports the router to be used in server.js.
+ * Controller file for writings: Defines all routes that have to do
+ *  with writings and their database operations. Routes are referenced
+ *  by the handler file (writing_handler.js)
  * 
- * Exists in the /routes directory. 
+ * Exists in the /server/controllers
  */
 
 const express = require('express');

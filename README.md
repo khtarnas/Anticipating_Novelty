@@ -1,8 +1,10 @@
 # Current Status:
 
-on Nov. 28: Changed naming conventions to fit desired MVC structure. Added nested routing.
+on Dec. 28: Added a cluster on MongoDb, successfully connectd to it and added data. TODO: currently is creating a new collection rather than adding to a preexisting one.
 
 on Nov. 29: Created the foundation of the application with a working and connected front and backend. Started added style and other additions. Next step: just added the writing model. Create a way to add a new writing and to view it. AND/OR get hosting set up.
+
+on Nov. 28: Changed naming conventions to fit desired MVC structure. Added nested routing.
 
 # Set-up Instructions:
 
@@ -12,6 +14,10 @@ The pre-reqs to running this are having [MongoDB](https://www.mongodb.com/docs/m
 2. Run '''npm install''' in both the client and server folders to generate a node_modules folder in each based on their respective package.json files.
 3. Run '''npm run dev''' in server folder and leave running
 4. Run '''npm start''' in the client folder -- the link should automatically pop up, but if not, navigate [here](https://localhost:3000/).
+
+# Notes:
+
+- The database for this is a cluster on the Mongodb cloud. The account is accessible via my email. The connection string is pasted directly into the code here, but exclusively because it is the free tier and this is just the testing phase.
 
 # Explanation:
 

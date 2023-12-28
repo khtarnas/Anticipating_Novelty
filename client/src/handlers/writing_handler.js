@@ -1,3 +1,11 @@
+/**
+ * Handler for writing: the functions referenced by view files
+ *  (on the server side) that deal with data related to writings
+ *  by referencing .
+ * 
+ * Exists in the /client/handlers
+ */
+
 import axios from 'axios';
 
 async function addNewWriting(title, desc, text) {
