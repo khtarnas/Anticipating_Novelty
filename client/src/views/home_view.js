@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import "../styles/home.css"
 
+import { motion } from "framer-motion"
+
 
 function Home() {
 
@@ -18,7 +20,16 @@ function Home() {
 
   return (
     
-    <div>
+    <motion.div
+      className='Home'
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.05 }}}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // exit={{ opacity: 0}}
+    >
+
         <h1>Welcome to My Website</h1>  
       {(typeof backendData.sampleList === 'undefined') ? (
         <p>Loading...</p>
@@ -28,7 +39,8 @@ function Home() {
         ))
       )
       }
-    </div>
+      
+    </motion.div>
   )
 }
 

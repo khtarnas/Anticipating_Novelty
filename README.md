@@ -23,7 +23,12 @@ The pre-reqs to running this are having [MongoDB](https://www.mongodb.com/docs/m
 
 TODO
 
-# Ideas:
+# Programming Ideas:
+
+- Motion transition between pages (currently have frmaer-motion installed and motion.div is written out in home_view.js and writing_view.js). Unsure what type of motion I want and/or IF I want it.
+
+
+# Concept Ideas
 
 - Blog: A section for my writing with an elegant display
  - Possibly a way for people to make comments and suggestions (anonymous)
