@@ -32,6 +32,15 @@ body {
 
 }
 
+.nav li {
+    color: inherit; /* inherits color from parents (i.e. .nav) */
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+}
+
 .nav a {
     color: inherit; /* inherits color from parents (i.e. .nav) */
     text-decoration: none;
@@ -47,4 +56,62 @@ body {
 
 .nav a:hover { /* on hover over the item -- below active in order to supersede it */
     background-color: #777;
+}
+
+
+/*
+The dropdown menu for Maps:
+*/
+
+/* The dropdown container */
+.map_dropdown {
+    float: left;
+    /* overflow: hidden; */
+}
+  
+/* Dropdown button */
+.map_dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .map_dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.map_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.map_dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.map_dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.map_dropdown:hover .map_dropdown-content {
+    display: block;
 }
