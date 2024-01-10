@@ -21,6 +21,7 @@ import { AnimatePresence } from 'framer-motion';
 import Home from "./views/home_view.js";
 import Writing from "./views/writing/writing_view.js";
 import AddWriting from "./views/writing/add_writing_view.js";
+import AllWriting from './views/writing/all_writings_view.js';
 import Projects from './views/projects/projects_view.js';
 import MapTravel from './views/map/map_travel_view.js';
 
@@ -45,6 +46,10 @@ function AllRoutes() {
                 <Route
                 path="add" //can NOT have "/" otherwise is absolute path
                 element={<AddWriting />} 
+                />
+                <Route
+                path="all" 
+                element={<AllWriting />} 
                 />
             </Route>
 

@@ -37,4 +37,15 @@ router.post('/add', async (req, res, next) => {
   }
 });
 
+router.get('/getAll', async (req, res, next) => {
+  try {
+    await Writing.find({}).then(function (writings) {
+      res.send(writings);
+    });
+
+  } catch (err) {
+    next(err);
+  }
+})
+
 module.exports = router;

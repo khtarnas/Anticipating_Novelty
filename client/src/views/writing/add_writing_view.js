@@ -13,9 +13,6 @@ function Writing() {
   /****** Handling functions ******/
   const addNewWriting = async () => {
 
-    console.log(currTitle);
-    console.log("HELLO?!");
-
     if (currTitle === '') {
       window.alert('Title is required. Please add a title and re-submit.');
       return;

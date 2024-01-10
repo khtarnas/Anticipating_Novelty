@@ -8,6 +8,22 @@
 
 import axios from 'axios';
 
+
+/**
+ * Get Requests
+ */
+
+async function retrieveAllWritings() {
+
+  const { data } = await axios.get('/writing/getAll', {});
+
+  return data;
+}
+
+/**
+ * POST Requests
+ */
+
 async function addNewWriting(title, desc, text) {
   if (!title) {
     throw new Error('No title given...');
@@ -26,5 +42,5 @@ async function addNewWriting(title, desc, text) {
 }
 
 export {
-    addNewWriting
+    addNewWriting, retrieveAllWritings
 }

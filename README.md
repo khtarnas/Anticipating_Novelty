@@ -1,5 +1,7 @@
 # Current Status:
 
+on Jan. 9: Now successfully retrieving data from the MongoDb database, not fully displaying it, need to finish that logic in client/src/views/writing/all_writings_view.js
+
 on Dec. 28: Added a cluster on MongoDb, successfully connectd to it and added data. TODO: currently is creating a new collection rather than adding to a preexisting one.
 
 on Nov. 29: Created the foundation of the application with a working and connected front and backend. Started added style and other additions. Next step: just added the writing model. Create a way to add a new writing and to view it. AND/OR get hosting set up.
