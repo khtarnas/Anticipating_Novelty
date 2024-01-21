@@ -11,13 +11,20 @@ import axios from 'axios';
 
 /**
  * Get Requests
+ * 
+ * note: initally variable name was "data". Do NOT do this as "data.data" will confuse it and you will
+ * get a gibberish result.
  */
 
 async function retrieveAllWritings() {
 
-  const { data } = await axios.get('/writing/getAll', {});
+  let all; 
+  
+  await axios.get('/writing/getAll', {})
+    .then(writings => all = writings)
+    .catch(err => all = { "err" : err})
 
-  return data;
+  return all.data;
 }
 
 /**

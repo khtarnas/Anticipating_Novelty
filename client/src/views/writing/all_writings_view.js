@@ -1,27 +1,30 @@
 import { Link } from 'react-router-dom'
 import "../../styles/writing.css"
 import { motion } from "framer-motion"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import * as handler from '../../handlers/writing_handler.js';
 
 
 function AllWriting() {
 
-    // const [backendData, setBackendData] = useState([{}])
+    const [allWritings, setAllWritings] = useState([{}]);
 
     const retrieveAllWriting = async () => {
 
         let writings = await handler.retrieveAllWritings();
-        window.alert(writings);
+        setAllWritings(writings);
+    };
 
-        return writings
+    // window.alert(allWritings);
 
-      };
+    // for (let [key, value] of allWritings) {
+    //     window.alert(key + " is " + value);
+    // }
 
-    
+    useEffect(() => retrieveAllWriting, []);
 
-  return(
+    return(
     <motion.div
       className='Writing'
       initial={{ width: 0 }}
@@ -34,12 +37,20 @@ function AllWriting() {
         <main>
             <h1>Here are ALL the writings!</h1>  
             <Link to="add">Add a writing here!</Link>
-            {console.log(writings)}
-            {/* <ul>
-                {for (i = 0; i < length(writings); ++i):
-                    <li key={item}>{item}</li>
-                ))}
-            </ul> */}
+            {/* {console.log(allWritings)}
+            {console.log(allWritings[0])}
+            {console.log(allWritings[0].title)} */}
+            
+            <ul>
+                {
+                    allWritings.map(writing => {
+                        return <li>{writing.title}</li>
+                    })
+
+                }
+
+            </ul>
+
                 
         </main>
     </motion.div>

@@ -39,9 +39,9 @@ router.post('/add', async (req, res, next) => {
 
 router.get('/getAll', async (req, res, next) => {
   try {
-    await Writing.find({}).then(function (writings) {
-      res.send(writings);
-    });
+    await Writing.find()
+      .then(writings => res.json(writings))
+      .catch(err => res.json(err))
 
   } catch (err) {
     next(err);
