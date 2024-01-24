@@ -31,7 +31,7 @@ async function retrieveAllWritings() {
  * POST Requests
  */
 
-async function addNewWriting(title, desc, text) {
+async function addNewWriting(title, desc, text, lang) {
   if (!title) {
     throw new Error('No title given...');
   }
@@ -42,7 +42,8 @@ async function addNewWriting(title, desc, text) {
   const { data } = await axios.post('/writing/add', {
     title,
     desc,
-    text
+    text,
+    lang
   }); 
 
   return data;

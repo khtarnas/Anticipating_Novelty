@@ -23,12 +23,12 @@ router.use(
 /****** Routes: ******/
 router.post('/add', async (req, res, next) => {
   const {
-    title, desc, text
+    title, desc, text, lang
   } = req.body;
 
   try {
     await Writing.create({
-      title, desc, text
+      title, desc, text, lang
     });
     res.send('event created');
     

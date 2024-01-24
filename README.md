@@ -1,4 +1,5 @@
 # Current Status:
+on Jan. 23: Now adding to the database in a more useful and complex manner (including a drop down menu for languages). Attempted to set up a footer, but ran out of time (not quite positioned at the bottom yet).
 
 on Jan. 20: Successfully retrieving, parsing and dislaying data from MongoDB database!
 

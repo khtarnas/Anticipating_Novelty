@@ -5,6 +5,7 @@ import {
 
 import Navbar from "./views/navbar_view.js";
 import AllRoutes from './Routes.js';
+import Footer from './views/footer_view.js';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <>
           <Navbar /> {/* This must be inside the routes or "Link to" will not work */}
           <AllRoutes />
+          <Footer />
         </>
       </Router>
     </div>
