@@ -1,4 +1,6 @@
 # Current Status:
+on Jan. 25: Slight frontend work like adding pictures from local file structure, adjusting text and placement, etc. Minor stuff just to get a start and only on main page. No progress on footer. Should also make a general purpose css file that applies to many pages so I can get more bang for my buck!
+
 on Jan. 23: Now adding to the database in a more useful and complex manner (including a drop down menu for languages). Attempted to set up a footer, but ran out of time (not quite positioned at the bottom yet).
 
 on Jan. 20: Successfully retrieving, parsing and dislaying data from MongoDB database!
